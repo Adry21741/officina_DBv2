@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Officina di Casa</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="auth" hidden>
+  <h1 class="logo">⚙ Officina di Casa</h1>
+  <form id="lf">
+    <label for="em">Email</label><input id="em" type="email" autocomplete="username" required>
+    <label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required>
+    <p id="aerr" class="err" role="alert"></p>
+    <button class="pri" style="width:100%">Accedi</button>
+    <button type="button" id="fg" style="width:100%;margin-top:.5rem">Password dimenticata</button>
+  </form>
+</section>
+<div id="app" hidden>
+  <header>
+    <button id="menu" aria-label="Menu">☰</button>
+    <span class="logo">⚙ Officina di Casa</span>
+    <span id="who" class="muted"></span>
+    <button id="theme" aria-label="Cambia tema">◐</button>
+    <button id="out">Esci</button>
+  </header>
+  <nav id="nav" aria-label="Sezioni"></nav>
+  <main id="main" tabindex="-1"></main>
+</div>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status"></div>
+<script src="config.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
