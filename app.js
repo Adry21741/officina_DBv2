@@ -38,7 +38,7 @@ parts:{t:'Ricambi e magazzino',arch:1,ord:'code',sel:'*',
 purchase_orders:{t:'Ordini di acquisto',desc:1,ord:'created_at',sel:'*',
  cols:[['N.',r=>r.number],['Fornitore',r=>r.supplier],['Prevista',r=>r.expected_date&&new Date(r.expected_date).toLocaleDateString('it-IT')],['Stato',r=>r.status]],
  f:[['supplier','Fornitore','text',1],['expected_date','Data prevista','date'],['status','Stato',L.po],['work_order_id','Ordine di lavoro','fk:work_orders'],['notes','Note','area']]}};
-let cur='dash',uid=null;
+let cur='dash',uid;
 const nav=[['dash','Dashboard'],...Object.keys(E).map(k=>[k,E[k].t]),['rep','Report']];
 
 async function route(){
